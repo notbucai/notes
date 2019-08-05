@@ -19,3 +19,4 @@
   new B().fn(); // B {}
   new B().a; // 123
   ```
+  ![原型链](./assets/proto.gif)
