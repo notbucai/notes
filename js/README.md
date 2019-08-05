@@ -19,4 +19,16 @@
   new B().fn(); // B {}
   new B().a; // 123
   ```
-  ![原型链](./assets/proto.gif)
+  ![原型链](./assets/proto.gif)  
+  ```
+  obj = {base:1,arr:[1,2]}
+  function A(){}
+  A.prototype = obj;
+  a = new A();
+  a.arr.push(3);
+  a.base = 2;
+
+  console.log(obj); // {base:1,arr:[1,2,3]}
+  console.log(a); // {base:2}
+  // 赋值会在对象身上覆盖属性
+  ```
