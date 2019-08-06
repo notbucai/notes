@@ -20,7 +20,7 @@
   new B().a; // 123
   ```
   ![原型链](./assets/proto.gif)  
-  ```
+  ```javascript
   obj = {base:1,arr:[1,2]}
   function A(){}
   A.prototype = obj;
@@ -31,4 +31,20 @@
   console.log(obj); // {base:1,arr:[1,2,3]}
   console.log(a); // {base:2}
   // 赋值会在对象身上覆盖属性
+  ```
+
+## 闭包
+  > 详情 [MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures)  
+  > 在函数外部访问函数局部变量 即为 `闭包`  
+  
+  ```javascript
+    // 假例子
+    function fn(){
+      const arr = [1,2,3];
+      return [1,2,3]
+    }
+    // 这里只是将引用地址返回并非在外部使用内部变量
+    const arr = fn();
+    console.log(arr);
+
   ```
