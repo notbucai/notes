@@ -48,3 +48,33 @@
     console.log(arr);
 
   ```
+
+## `==` 与 `===`
+  > === 严格相等，会比较两个值的类型和值  
+  > == 抽象相等，比较时，会先进行类型转换，然后再比较值  
+  >   
+  > "==" 转化规则：  
+  > 首先通过valueOf 转换，即 obj.valueOf()方法的返回值  
+  > 如果 obj.valueOf()方法的返回值是原始类型，那么直接返回  
+  > 如果不是，再通过 obj.toString()方法转换  
+  > 如果obj.toString()返回的是原始类型，直接返回该值  
+  > 如果还不是原始类型，抛出不能转换异常。  
+  ```javascript
+  let a = {
+    value: 0,
+    valueOf() {
+        return ++this.value;
+    }
+  }
+  console.log(a == 1 && a == 2 && a == 3) // true
+  // --- 以下只是 `===` 相等的情况，与主题关系不大
+  // --- 请上下分开运行 ---
+  var val = 0;
+  Object.defineProperty(global, 'a', {
+    get: function(){
+      return ++val;
+    }
+  })
+  console.log(a === 1 && a === 2 && a === 3) // true
+  
+  ```
