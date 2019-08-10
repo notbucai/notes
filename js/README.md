@@ -78,3 +78,14 @@
   console.log(a === 1 && a === 2 && a === 3) // true
   
   ```
+
+
+## Event Loop
+
+  > JavaScript的事件分两种，宏任务(macro-task)和微任务(micro-task)  
+
+  > 宏任务：包括整体代码script，setTimeout，setInterval
+
+  > 微任务：Promise.then(非new Promise)，process.nextTick(node中)  
+  
+  > 事件的执行顺序，是先执行宏任务，然后执行微任务，这个是基础，任务可以有同步任务和异步任务，同步的进入主线程，异步的进入Event Table并注册函数，异步事件完成后，会将回调函数放入Event Queue中(宏任务和微任务是不同的Event Queue)，同步任务执行完成后，会从Event Queue中读取事件放入主线程执行，回调函数中可能还会包含不同的任务，因此会循环执行上述操作。
