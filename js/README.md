@@ -99,3 +99,7 @@
   > 1.创建一个funcrion 参数用于传递jsonp返回的数据
   > 2.在页面上 添加一个 script src属性写好请求的地址  
   > 3.后端返回·1·中的函数（执行函数，传递数据）  
+
+## 数据类型
+> 基本数据类型 null undefined string number boolean symbol  
+> 复杂（引用）数据类型 Object
