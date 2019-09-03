@@ -103,3 +103,6 @@
 ## 数据类型
 > 基本数据类型 null undefined string number boolean symbol  
 > 复杂（引用）数据类型 Object 
+
+## Math.round() 函数返回一个数字四舍五入后最接近的整数
+
