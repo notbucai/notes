@@ -104,5 +104,8 @@
 > 基本数据类型 null undefined string number boolean symbol  
 > 复杂（引用）数据类型 Object 
 
-## Math.round() 函数返回一个数字四舍五入后最接近的整数
+## Math.round() 函数返回一个数字四舍五入后最接近的整数 
+> Math.round(-1.5) 1  
+> Math.round(1.5) 2    
+> (正数：四舍五入，负数：五舍六入)  
 
