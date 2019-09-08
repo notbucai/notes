@@ -109,3 +109,57 @@
 > Math.round(1.5) 2    
 > (正数：四舍五入，负数：五舍六入)  
 
+## 函数节流
+```JavaScript
+
+  const processor = {
+    timeoutId:null,
+    // 实际执行函数
+    performProcessing(){
+      
+    },
+    // 调用函数 
+    process(){
+      clearTimeout(this.timeoutId);
+      const that = this;
+
+      setTimeout(function(){
+        that.performProcessing();
+      },100)
+    }
+  };
+  // 通过不定时调用该函数达到函数节流
+  processor.process();
+
+  // 抽象一下
+  class Processor{
+      constructor(fn,time=100,context = null){
+      this.timeoutId = null;
+      this.time = time;
+      // 保存执行作用域
+      this.ctx = context;
+      // 将实际执行函数保存
+      this.performProcessing = fn;
+    }
+    // 每次调用该函数执行对应代码
+    process(...args){ // 如果需要传递参数
+      clearTimeout(this.timeoutId);
+      const that = this;
+      setTimeout(function(){
+        that.performProcessing.apply(this.ctx, args);
+      },this.time);
+    }
+  }
+  const p = new Processor(()=>{
+    // 123
+  },100);
+
+  // 再简化
+  function throttle(method,context){
+    clearTimeout(method.tId);
+    method.tId = setTimeout(function(){
+      method.call(context);
+    },100);
+  }
+
+```
