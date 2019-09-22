@@ -190,3 +190,7 @@
 > 分两步：  
 > 1.在script标签上增加crossorigin属性；  
 > 2.设置js资源响应头Access-Control-Allow-Origin:*；  
+
+## IIFEs
+> Instantly Invoked Function Expression 即时调用函数表达式  
+> 1.创建一个局部作用域隔离变量；
