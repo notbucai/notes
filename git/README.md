@@ -44,5 +44,37 @@ $ npx commitizen init cz-conventional-changelog --save-dev --save-exact
 }
 ```
 
-之后就可以在命令行中执行`npm run commit`
+> 之后就可以在命令行中执行`npm run commit` 替代 `git commit`
 
+### Example
+```
+$ git add .
+$ npm run commit 
+
+// 选择你要更改的类型
+Select the type of change that you're committing: (Use arrow keys)
+❯ feat:        A new feature 
+  fix:         A bug fix 
+  improvement: An improvement to a current feature 
+  docs:        Documentation only changes 
+  style:       Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc) 
+  refactor:    A code change that neither fixes a bug nor adds a feature 
+  perf:        A code change that improves performance 
+
+// 更该的范围
+What is the scope of this change (e.g. component or file name): (press enter to skip) 
+
+// 简短的介绍
+Write a short, imperative tense description of the change (max 94 chars)
+
+// 细节
+Provide a longer description of the change: (press enter to skip)
+
+// 是否重大变化
+Are there any breaking changes? (y/N) 
+
+// 是否影响没有结局的问题
+Does this change affect any open issues? (y/N)
+
+// 完成
+```
