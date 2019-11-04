@@ -211,3 +211,9 @@ console.log(encodedString); // Outputs: "SGVsbG8gV29ybGQh"
 var decodedString = atob(encodedString);
 console.log(decodedString); // Outputs: "Hello World!"
 ```
+
+## 获取当前的url和来源的url
+```
+window.location.href // 获取当前url
+document.referrer // 获取源
+```
