@@ -217,3 +217,12 @@ console.log(decodedString); // Outputs: "Hello World!"
 window.location.href // 获取当前url
 document.referrer // 获取源
 ```
+
+## nodejs 动态加载模块 
+1. 通过module **内部**模版解析的方法 缺点：内部私有方法。。
+```javascript
+const code =  'module.exports = function () {console.log("abc");}';
+const codeModule = module._compile(code,'xxx.js');
+var codeModule_ = module.exports;
+codeModule_();
+```
