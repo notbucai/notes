@@ -226,3 +226,10 @@ const codeModule = module._compile(code,'xxx.js');
 var codeModule_ = module.exports;
 codeModule_();
 ```
+
+## 判断当前环境
+```JavaScript
+const isBrowser = (typeof self === 'object' && self.self === self && self;
+
+const isNode = (typeof global === 'object' && global.global === global && global) || this;
+```
