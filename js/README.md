@@ -233,3 +233,12 @@ const isBrowser = (typeof self === 'object' && self.self === self && self;
 
 const isNode = (typeof global === 'object' && global.global === global && global) || this;
 ```
+
+## JS 唯一 ID 生成 
+> 详见 id.js
+```JavaScript
+// 速度并不快，目前想不到优化的地方了
+// 50s 的结果
+// 未过滤：15871976
+// Set过滤：15871976
+```
