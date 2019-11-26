@@ -23,5 +23,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "pi": "^2.0.3",
+    "superagent": "^5.1.1"
   }
 }

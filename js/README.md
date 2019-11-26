@@ -242,3 +242,14 @@ const isNode = (typeof global === 'object' && global.global === global && global
 // 未过滤：15871976
 // Set过滤：15871976
 ```
+
+## PI的飞花令
+> 详见 Feihualing.js  
+
+***步骤***  
+
+1. 下载零到九的诗词句子
+2. 得到pi
+3. 遍历pi的每一位
+4. 通过之前下载的句子进行匹配
+5. 得到数据
