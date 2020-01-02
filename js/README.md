@@ -253,3 +253,13 @@ const isNode = (typeof global === 'object' && global.global === global && global
 3. 遍历pi的每一位
 4. 通过之前下载的句子进行匹配
 5. 得到数据
+
+
+## TCO (Tail Call Optimization) 尾递归[调用|优化]
+> 递归：一个函数重复调用自己  
+> 
+
+## for、forEach、for of的性能
+1. for 最好
+2. forEach与for of 相差无几 平均测试下来forEach略高for of
+3. forEach 无法通过 break跳出 for of内存占用上有一定的优势
