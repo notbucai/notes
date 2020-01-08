@@ -263,3 +263,8 @@ const isNode = (typeof global === 'object' && global.global === global && global
 1. for 最好
 2. forEach与for of 相差无几 平均测试下来forEach略高for of
 3. forEach 无法通过 break跳出 for of内存占用上有一定的优势
+
+## uniapp 弹窗禁止页面滚动
+```
+@touchmove.stop.prevent
+```
