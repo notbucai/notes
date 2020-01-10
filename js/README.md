@@ -268,3 +268,9 @@ const isNode = (typeof global === 'object' && global.global === global && global
 ```
 @touchmove.stop.prevent
 ```
+
+## window.console.log()和console .log()的区别
+
+`window.console.log`只能在浏览器中使用  
+
+`console.log`在浏览器、Node等其他环境中都可以使用
