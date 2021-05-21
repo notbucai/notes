@@ -1,28 +1,28 @@
-class Skack {
+class Stack {
 
   constructor() {
-    this.skack = [];
+    this.stack = [];
   }
 
   // 入栈
   push(data) {
-    return this.skack.push(data);
+    return this.stack.push(data);
   }
   // 出栈
   pop() {
-    return this.skack.pop();
+    return this.stack.pop();
   }
   
   toString() {
-    return `[${this.skack.join(',')}]`;
+    return `[${this.stack.join(',')}]`;
   }
 }
 
 (function () {
-  const skack = new Skack();
-  skack.push(1);
-  skack.push(12);
-  skack.push(123);
+  const stack = new Stack();
+  stack.push(1);
+  stack.push(12);
+  stack.push(123);
 
   /**
   [1,12,123]
@@ -30,12 +30,12 @@ class Skack {
   [1]
   []
    */
-  console.log(skack.toString());
-  skack.pop();
-  console.log(skack.toString());
-  skack.pop();
-  console.log(skack.toString());
-  skack.pop();
-  console.log(skack.toString());
+  console.log(stack.toString());
+  stack.pop();
+  console.log(stack.toString());
+  stack.pop();
+  console.log(stack.toString());
+  stack.pop();
+  console.log(stack.toString());
 
 })();
